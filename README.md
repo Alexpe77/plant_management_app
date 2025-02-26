@@ -7,11 +7,26 @@ With PlantCare, no more sad leaves or dried-up cacti!</br>
 Add your plants, track their needs, and get smart reminders to keep them thriving.</br>
 Taking care of your plants has never been this easy! 🌿
 
-## Usage
-1. Open the application in your browser.
-2. Use the form to add a new plant.
-3. View the list of plants and their details.
-4. Delete plants as needed.
+## Description
+This is a plant management application built with Symfony that allows users to add, view, and delete plants. Users can also track the watering needs of their plants and add notes and images for each plant.
+
+## Features
+- Add and delete plants
+- View a list of plants
+- Track watering needs of plants
+- Add notes and images for each plant
+
+## Technologies Used
+- Symfony
+- Doctrine ORM
+- Twig
+- MySQL
+
+## Setup Instructions
+Prerequisites :
+- PHP >= 8.0
+- Composer
+- MySQL
 
 ## Contributing
 Feel free to submit issues and pull requests.
