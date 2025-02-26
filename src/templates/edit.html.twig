@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit {{ plant.name }}{% endblock %}
+
+{% block body %}
+    <h1>Edit {{ plant.name }}</h1>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn">Save modifications</button>
+    {{ form_end(form) }}
+    <a href="{{ path('plant_index') }}">Back to list</a>
+{% endblock %}

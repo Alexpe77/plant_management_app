@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ plant.name }}{% endblock %}
+
+{% block body %}
+    <h1>{{ plant.name }}</h1>
+    <p>Species: {{ plant.species }}</p>
+    <p>Last watered: {{ plant.lastWatered|date('d/m/Y') }}</p>
+    <p>Notes: {{ plant.notes }}</p>
+    {% if plant.imageUrl %}
+        <img src="{{ plant.imageUrl }}" alt="{{ plant.name }}">
+    {% endif %}
+    <a href="{{ path('plant_edit', {'id': plant.id}) }}">Edit</a>
+    <form method="post" action="{{ path('plant_delete', {'id': plant.id}) }}" style="display: inline-block;">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ plant.id) }}">
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{{ path('plant_index') }}">Back to list</a>
+{% endblock %}

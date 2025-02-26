@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add a new plant{% endblock %}
+
+{% block body %}
+    <h1>Add a new plant</h1>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn">Add</button>
+    {{ form_end(form) }}
+    <a href="{{ path('plant_index') }}">Back to list</a>
+{% endblock %}
