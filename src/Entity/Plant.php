@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Entity;
 
 use App\Repository\PlantRepository;
@@ -20,19 +22,70 @@ class Plant
      */
     private $name;
 
-    public function getId(): ?int
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $species;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $lastWatered;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $notes;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $imageUrl;
+
+    public function getSpecies(): ?string
     {
-        return $this->id;
+        return $this->species;
     }
 
-    public function getName(): ?string
+    public function setSpecies(string $species): self
     {
-        return $this->name;
+        $this->species = $species;
+
+        return $this;
     }
 
-    public function setName(string $name): self
+    public function getLastWatered(): ?\DateTimeInterface
     {
-        $this->name = $name;
+        return $this->lastWatered;
+    }
+
+    public function setLastWatered(\DateTimeInterface $lastWatered): self
+    {
+        $this->lastWatered = $lastWatered;
+
+        return $this;
+    }
+
+    public function getNotes(): ?string
+    {
+        return $this->notes;
+    }
+
+    public function setNotes(?string $notes): self
+    {
+        $this->notes = $notes;
+
+        return $this;
+    }
+
+    public function getImageUrl(): ?string
+    {
+        return $this->imageUrl;
+    }
+
+    public function setImageUrl(?string $imageUrl): self
+    {
+        $this->imageUrl = $imageUrl;
 
         return $this;
     }
