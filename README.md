@@ -16,6 +16,13 @@ This is a plant management application built with Symfony that allows users to a
 - Track watering needs of plants
 - Add notes and images for each plant
 
+## Future features
+- Watering reminder
+- History of watering
+- Social share so you can see other people plants if they want (not mandatory)
+- Forum so you can share your passion for plants with the community :handshake:
+- A lot of other things ( i have a ton of ideas :nerd_face:)
+
 ## Technologies Used
 - Symfony
 - Doctrine ORM
